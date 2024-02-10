@@ -1,0 +1,56 @@
+/* used for things that should be hidden in the ui,
+but useful for people who use screen readers */
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+}
+
+.toggle-all {
+    width: 40px !important;
+    height: 60px !important;
+    right: auto !important;
+}
+
+.toggle-all-label {
+    pointer-events: none;
+}
+.yellow{
+    color:yellow;
+}
+.view{
+    display: flex;
+    gap:4px;
+    align-items: center;
+}
+
+.view span{
+    font-size: 12px;
+}
+.first{
+    color:green !important
+}
+.second{
+    color:magenta !important
+}
+.third{
+    color:yellow !important
+}
+.newly_added{
+    animation: change-color 3s linear;
+}
+@keyframes change-color {
+    0%{
+        color:red
+    }
+    100%{
+        color:black
+    }
+}
