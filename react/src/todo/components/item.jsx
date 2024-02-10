@@ -68,7 +68,7 @@ export const Item = memo(function Item({ todo, dispatch, index ,size}) {
                     <>
                         <input className="toggle" type="checkbox" data-testid="todo-item-toggle" checked={completed} onChange={toggleItem} />
                         <label data-testid="todo-item-label" onDoubleClick={handleDoubleClick} className={labelClass} >
-                            {title}
+                            {title}45
                         </label>
                         <span>{createdAt.toUTCString()}</span>
                         {completed && <span>{updatedAt.toUTCString()}</span>}
