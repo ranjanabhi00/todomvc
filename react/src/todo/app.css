@@ -22,9 +22,7 @@ but useful for people who use screen readers */
 .toggle-all-label {
     pointer-events: none;
 }
-.yellow{
-    color:yellow;
-}
+
 .view{
     display: flex;
     gap:4px;
@@ -34,18 +32,23 @@ but useful for people who use screen readers */
 .view span{
     font-size: 12px;
 }
-.first{
+
+.last{
     color:green !important
 }
-.second{
+
+.second_last{
     color:magenta !important
 }
-.third{
+
+.third_last{
     color:yellow !important
 }
+
 .newly_added{
-    animation: change-color 3s linear;
+    animation: change-color 15s linear;
 }
+
 @keyframes change-color {
     0%{
         color:red

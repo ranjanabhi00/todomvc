@@ -55,7 +55,7 @@ export const todoReducer = (state, action) => {
         case REMOVE_ALL_ITEMS:
             return [];
         case TOGGLE_ALL:
-            return state.map((todo) => (todo.completed !== action.payload.completed ? { ...todo, completed: action.payload.completed } : todo));
+            return state.map((todo) => (todo.completed !== action.payload.completed ? { ...todo, completed: action.payload.completed,updatedAt:new Date() } : todo));
         case REMOVE_COMPLETED_ITEMS:
             return state.filter((todo) => !todo.completed);
         case SET_NEWLY_ADDED:

@@ -40,21 +40,20 @@ export const Item = memo(function Item({ todo, dispatch, index ,size}) {
     useEffect(()=>{
        let timer= setTimeout(()=>{
             updateItemColor(id)
-        },5000)
+        },15000)
 
         return ()=>clearTimeout(timer)
     },[])
 
     let labelClass=classnames({
-        newly_added:isNewlyAdded,
-        currently_added:!isNewlyAdded
+        newly_added:isNewlyAdded
     })
 
     if(route=='/completed'){
         labelClass=classnames({
-            first:index==size-1,
-            second:index==size-2,
-            third:index==size-3
+            last:index===size-1,
+            second_last:index===size-2,
+            third_last:index===size-3
         })
     }
   
