@@ -38,11 +38,10 @@ export const Item = memo(function Item({ todo, dispatch, index ,size}) {
         [id, removeItem, updateItem]
     );
     useEffect(()=>{
-       let timer= setTimeout(()=>{
+        setTimeout(()=>{
             updateItemColor(id)
         },15000)
-
-        return ()=>clearTimeout(timer)
+       
     },[])
 
     let labelClass=classnames({
